@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+    <!-- View -->
+    <div class="container" style="margin-top:30px">
+      <div class="section">
+
+        <div class="article1">
+          <a href="<%=@post.file_url%>" data-confirm="다운로드 하시겠습니까?" download><%=@post.original_filename%></a>
+        </div>
+
+        <div class="article2">
+          <p><%=@post.content.html_safe%></p>
+        </div>
+
+      </div>
+    </div>
+
+  </body>

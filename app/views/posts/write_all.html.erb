@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+    <!-- Create Pass PF -->
+    <div class="container">
+      <form action="/posts/create_all" method="post" enctype="multipart/form-data">
+
+        <label for="comment">파일 올리기</label>
+        <input type="file" name="all_file" accept="file_extension">
+
+        <div class="form-group">
+          <%= tinymce %>
+          <textarea class="form-control tinymce" name="content" rows="15" id="comment"></textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+
+      </form>
+    </div>
+
+  </body>
+</html>
