@@ -1,27 +1,17 @@
 # README
 
-# 프로폴리오
-* 170721 - 합격 포트폴리오 관리
+# 프로폴리오(Profolio)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+멋쟁이사자처럼 인천대학교 해커톤
 
 * Ruby version
+ruby 2.4.0p0
 
-* System dependencies
+* Rails version
+Rails 5.1.2
 
-* Configuration
+* Controller
 
-* Database creation
+* DB
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* View

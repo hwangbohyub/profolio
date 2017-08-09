@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <!-- Pass PF -->
+    <div class="container">
+      <h3>합격 포트폴리오</h3>
+      <% if @search_result==1 %>
+        <p><%=@passes.length%>개의 결과...</p>
+      <% end %>
+
+      <% @passes.each do |p| %>
+      <div class="container" style="padding:30px; border-top:1px solid #cccccc">
+        <div class="media">
+          <div class="media-left">
+            <img src="<%= asset_path @user %>" class="media-object" style="width:60px">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><%=p.user.name%></h4>
+            <p><%= p.content.html_safe %></p>
+          </div>
+          <div class="media-right">
+            <a href="/pass/<%=p.id%>" class="btn btn-info" role="button">이동</a>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+    </div>
+
+    <!-- Post PF -->
+    <div class="container">
+      <h3>내 포트폴리오</h3>
+      <% if @search_result==1 %>
+        <p><%=@posts.length%>개의 결과...</p>
+      <% end %>
+
+      <% @posts.each do |p| %>
+      <div class="container" style="padding:30px; border-top:1px solid #cccccc">
+        <div class="media">
+          <div class="media-left">
+            <img src="<%= asset_path @user %>" class="media-object" style="width:60px">
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading"><%=p.user.name%></h4>
+            <p><%= p.content.html_safe %></p>
+          </div>
+          <div class="media-right">
+            <a href="/posts/<%=p.id%>" class="btn btn-info" role="button">이동</a>
+          </div>
+        </div>
+      </div>
+      <% end %>
+
+    </div>
+
+  </body>
+</html>

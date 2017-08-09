@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+    <!-- Create Pass PF -->
+    <div class="container">
+      <%= form_tag "/pass/#{@pass.id}", method: 'patch' do %>
+
+        <label for="comment">파일 올리기</label>
+        <input type="file" name="file" accept="file_extension" disabled="disabled">
+
+        <div class="form-group">
+          <%= tinymce %>
+          <textarea class="form-control tinymce" name="content" rows="15" id="comment">
+            <%=@pass.content%>
+          </textarea>
+        </div>
+
+        <button type="submit" class="btn">Submit</button>
+
+      <% end %>
+    </div>
+
+  </body>
+</html>

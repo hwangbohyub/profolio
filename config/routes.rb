@@ -1,21 +1,36 @@
 Rails.application.routes.draw do
 
   devise_for :users
+
+  #home
   root 'home#main'
+  get '/my_posts' => 'home#my_posts'
+  get '/my_info' => 'home#my_info'
+  get '/intro' => 'home#intro'
+  get '/guide1' => 'home#guide1'
+  get '/guide2' => 'home#guide2'
 
   #pass
-  get 'home/pass'
-  get 'home/write_pass' => 'home#write_pass'
-  post 'home/create_pass' => 'home#create_pass'
-  get 'home/view_pass/:id' => 'home#view_pass'
-  get 'home/search_pass' => 'home#search_pass'
+  get '/pass' => 'pass#pass'
+  get '/pass/write' => 'pass#write'
+  post '/pass' => 'pass#create'
+  get '/pass/:id' => 'pass#view'
+
+  get '/pass/:id/edit' => 'pass#edit'
+  put '/pass/:id' => 'pass#update'
+  patch '/pass/:id' => 'pass#update'
+  delete '/pass/:id' => 'pass#destroy'
 
   #posts
-  get 'posts/all'
-  get 'posts/write_all' => 'posts#write_all'
-  post 'posts/create_all' => 'posts#create_all'
-  get 'posts/view_all/:id' => 'posts#view_all'
-  get 'posts/search_all' => 'posts#search_all'
+  get '/posts' => 'posts#post'
+  get '/posts/write' => 'posts#write'
+  post '/posts' => 'posts#create'
+  get '/posts/:id' => 'posts#view'
+
+  get '/posts/:id/edit' => 'posts#edit'
+  put '/posts/:id' => 'posts#update'
+  patch '/posts/:id' => 'posts#update'
+  delete '/posts/:id' => 'posts#destroy'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

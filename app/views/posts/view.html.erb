@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+
+    <!-- View -->
+    <div class="container" style="margin-top:30px">
+      <div class="section">
+
+        <div class="article">
+          <h4><%=@post.user.name%></h4>
+        </div>
+
+        <div class="article">
+          <a href="<%=@post.file_url%>" data-confirm="다운로드 하시겠습니까?" download><%=@post.original_filename%></a>
+        </div>
+
+        <div class="article">
+          <p><%=@post.content.html_safe%></p>
+        </div>
+
+        <hr>
+
+        <div class="article">
+          <%= link_to '[삭제]', "/posts/#{@post.id}", class: 'text-danger', method: 'delete', data: {confirm: "정말 삭제하시겠습니까?"} %>
+          <%= link_to '[수정]', "/posts/#{@post.id}/edit", class: 'text-success' %>
+          <%= link_to '[목록]', '/posts', class: 'text-primary' %>
+        </div>
+
+      </div>
+    </div>
+
+  </body>

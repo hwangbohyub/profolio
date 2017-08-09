@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   #posts
-  def all
+  def post
     @posts = Post.all.order("created_at DESC")
 
     if params[:query]
@@ -14,20 +14,39 @@ class PostsController < ApplicationController
     @user = 'user.png'
   end
 
-  def write_all
+  def write
 
   end
 
-  def create_all
+  def create
     uploader = FileUploader.new
-    uploader.store!(params[:all_file])
+    uploader.store!(params[:file])
 
-    Post.create(file_url: uploader.url, content: params[:content], original_filename: params[:all_file].original_filename)
+    Post.create(user_id: current_user.id ,file_url: uploader.url, content: params[:content], original_filename: params[:file].original_filename)
 
-    redirect_to "/posts/all"
+    redirect_to '/posts'
   end
 
-  def view_all
+  def view
     @post = Post.find(params[:id])
+  end
+
+  def edit
+    @post = Post.find(params[:id])
+  end
+
+  def update
+    @post = Post.find(params[:id])
+    @post.content = params[:content]
+    @post.save
+
+    redirect_to "/posts/#{@post.id}"
+  end
+
+  def destroy
+    post = Post.find(params[:id])
+    post.destroy
+
+    redirect_to '/posts'
   end
 end

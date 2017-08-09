@@ -2,37 +2,34 @@ class HomeController < ApplicationController
 
   #home
   def main
+    @first = 'first.jpg'
+    @second = 'second.jpg'
+    @third = 'third.jpg'
   end
 
-  #pass
-  def pass
-    @passes = Pass.all.order("created_at DESC")
-
-    if params[:query]
-      @passes = Pass.search(params[:query]).order("created_at DESC")
-      @search_result = 1
-    else
-      @passes = Pass.all.order("created_at DESC")
-    end
+  def my_posts
+    user = User.find_by(id: current_user.id)
+    @posts = user.posts # <- has_many :posts를 명시해서 사용 가능!
+    @passes = user.passes
 
     #image
     @user = 'user.png'
   end
 
-  def write_pass
+  def my_info
+
   end
 
-  def create_pass
-    uploader = FileUploader.new
-    uploader.store!(params[:pass_file])
+  def intro
 
-    Pass.create(file_url: uploader.url, content: params[:content], original_filename: params[:pass_file].original_filename)
-
-    redirect_to "/home/pass"
   end
 
-  def view_pass
-    @pass = Pass.find(params[:id])
+  def guide1
+
+  end
+
+  def guide2
+
   end
 
 end

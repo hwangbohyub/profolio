@@ -1,12 +1,187 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title></title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
 
+    <!-- Header Carousel -->
+    <header id="myCarousel" class="carousel slide">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+        </ol>
 
-  </body>
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <div class="fill"><%= image_tag "word.jpg" %></div>
+                <div class="carousel-caption">
+                    <h2>포트폴리오 어떻게 쓰는지 막막 하다고요?</h2>
+                    <h3>바로가기</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill"><%= image_tag "portfolio.jpg" %></div>
+                <div class="carousel-caption">
+                    <h2>합격자들의 포트폴리오 보러가기</h2>
+                    <h3>바로가기</h3>
+                </div>
+            </div>
+            <div class="item">
+                <div class="fill"><%= image_tag "coach.jpg" %></div>
+                <div class="carousel-caption">
+                    <h2>전문가들의 포트폴리오 코칭 서비스</h2>
+                    <h3>바로가기</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="icon-prev"></span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="icon-next"></span>
+        </a>
+    </header>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Portfolio Section -->
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="page-header">합격 포트폴리오</h2>
+            </div>
+            <div class="col-xs-3 col-xs-8">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-xs-3 col-xs-8">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-xs-3 col-xs-8">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-xs-3 col-xs-8">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-xs-3 col-xs-8">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-xs-3 col-xs-8">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-xs-3 col-xs-8">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+            <div class="col-xs-3 col-xs-8">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="http://placehold.it/700x450" alt="">
+                </a>
+            </div>
+        </div>
+
+
+
+        <!--가이드-->
+          <hr class="featurette-divider">
+
+          <!-- First Featurette -->
+          <div class="featurette" id="about">
+              <div class="featurette-image img-circle img-responsive pull-right"><%= image_tag "001.png" %></div>
+              <h2 class="featurette-heading">전문가의 포트폴리오
+                  <span class="text-muted">coaching & mentoring</span>
+              </h2>
+              <p class="lead">프로폴리오에서는 전문가의 코칭 및 맨토링 시스템으로 고객님의  포트폴리오를 더 나은 작품으로 완성 시켜 드립니다. </p>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- Second Featurette -->
+          <div class="featurette" id="about">
+              <div class="featurette-image img-circle img-responsive pull-left"><%= image_tag "002.png"%></div>
+              <h2 class="featurette-heading">처음부터 완성까지
+                  <br><span class="text-muted">포트폴리오 가이드라인</span>
+              </h2>
+              <p class="lead">막막하기만 했던 포트폴리오 작성! 프로폴리오의 가이드 서비스로 보다 나은 작품을 완성해 보세요.</p>
+          </div>
+
+          <hr class="featurette-divider">
+
+          <!-- Third Featurette -->
+          <div class="featurette" id="about">
+              <div class="featurette-image img-circle img-responsive pull-right"><%= image_tag "003.png"%></div>
+              <h2 class="featurette-heading">기업에 합격한 사람들의
+                  <span class="text-muted">포트폴리오 공유</span>
+              </h2>
+              <p class="lead">입사에 성공한 선배들의 합격 포트폴리오를 프로폴리오에서 찾아볼 수 있습니다.</p>
+          </div>
+
+          <hr class="featurette-divider">
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-xs-12">
+                    <p>Copyright &copy; Your Website 2017</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Script to Activate the Carousel -->
+    <script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+    </script>
+
+</body>
+
 </html>

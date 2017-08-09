@@ -10,6 +10,10 @@
     <!-- Head -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+
     <!-- Bootstap CDN -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -21,43 +25,46 @@
   <body>
 
     <!-- NavBar -->
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">Profolio</a>
         </div>
         <ul class="nav navbar-nav">
+          <li><a href="/intro">Profolio소개</a></li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">My PF
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">포트폴리오
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">내 포트폴리오 관리</a></li>
-              <li><a href="#">내 정보</a></li>
+              <li><a href="/pass">합격 포트폴리오 공유</a></li>
+              <li><a href="/posts">포트폴리오 게시판</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pass PF
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">포트폴리오 작성 가이드
             <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="/home/pass">합격 포트폴리오</a></li>
-              <li><a href="/home/write_pass">합격 포트폴리오 등록하기</a></li>
+              <li><a href="/guide1">포트폴리오란?</a></li>
+              <li><a href="/guide2">포트폴리오 가이드</a></li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">All PF
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/posts/all">전체 포트폴리오</a></li>
-              <li><a href="/posts/write_all">내 포트폴리오 등록하기</a></li>
-            </ul>
-          </li>
-          <li><a href="/home/guide">Guide PF</a></li>
+          <li><a href="">전문가 인터넷 상담</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
-
-          <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> 회원가입</a></li>
-          <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
-          
+          <% if user_signed_in? %>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon-user"></span> <%=current_user.email%>
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/my_posts">내 포트폴리오 관리</a></li>
+                <li><a href="/my_info">내 정보</a></li>
+              </ul>
+            </li>
+            <li><a href="/users/sign_out"><span class="glyphicon glyphicon-log-in"></span> 로그아웃</a></li>
+          <% else %>
+            <li><a href="/users/sign_up"><span class="glyphicon glyphicon-user"></span> 회원가입</a></li>
+            <li><a href="/users/sign_in"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+          <% end %>
         </ul>
       </div>
     </nav>

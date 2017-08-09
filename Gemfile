@@ -9,9 +9,11 @@ end
 gem 'carrierwave', '~> 1.0'
 gem "fog-aws"
 # Devise
-gem 'devise'
+gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'devise-i18n'
 gem 'bcrypt', platforms: :ruby
+gem 'cancancan'
+gem 'rolify'
 # Bootstrap
 gem 'bootstrap', '~> 4.0.0.alpha6'
 # tinymce
