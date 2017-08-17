@@ -5,6 +5,7 @@ class CreatePasses < ActiveRecord::Migration[5.1]
       t.belongs_to :user
       t.string :file_url, default: ""
       t.string :original_filename, default: ""
+      t.text :title
       t.text :content
 
       t.timestamps

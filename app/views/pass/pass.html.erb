@@ -30,11 +30,12 @@
       <div class="container" style="padding:30px; border-top:1px solid #cccccc">
         <div class="media">
           <div class="media-left">
-            <img src="<%= asset_path @user %>" class="media-object" style="width:60px">
+            <img src="http://www.freeiconspng.com/uploads/flat-face-icon-23.png" class="media-object" style="width:60px">
           </div>
           <div class="media-body">
-            <h4 class="media-heading"><%=p.user.name%></h4>
-            <p><%= p.content.html_safe %></p>
+            <p class="media-heading"><%=p.user.name%></p>
+            <h4><%= p.title %></h4>
+            <p style="font-size:0.8em; color:gray"><%= "#{time_ago_in_words(p.created_at)} 전" %></p>
           </div>
           <div class="media-right">
             <a href="/pass/<%=p.id%>" class="btn btn-info" role="button">이동</a>

@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/intro' => 'home#intro'
   get '/guide1' => 'home#guide1'
   get '/guide2' => 'home#guide2'
+  get '/mentor' => 'home#mentor'
 
   #pass
   get '/pass' => 'pass#pass'
@@ -31,6 +32,10 @@ Rails.application.routes.draw do
   put '/posts/:id' => 'posts#update'
   patch '/posts/:id' => 'posts#update'
   delete '/posts/:id' => 'posts#destroy'
+
+  #comments
+  post '/comments/:post_id' => 'comments#create'
+  delete '/comments/:post_id/:id' => 'comments#destroy'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

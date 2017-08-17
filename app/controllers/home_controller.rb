@@ -17,19 +17,18 @@ class HomeController < ApplicationController
   end
 
   def my_info
-
   end
 
   def intro
-
   end
 
   def guide1
-
   end
 
   def guide2
+  end
 
+  def mentor
   end
 
 end

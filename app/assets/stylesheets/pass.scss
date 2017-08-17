@@ -9,3 +9,28 @@
   flex-direction: column;
   justify-content: center;
 }
+
+.article1 {
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding : 10px;
+  background-color: #eeeeee
+}
+
+.article2 {
+  border-bottom: 1px solid #000000;
+  padding : 10px;
+}
+
+.article3 {
+  border-bottom: 1px solid #cccccc;
+  padding: 10px;
+}
+
+#content {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 500px;
+  height: 500px;
+}
