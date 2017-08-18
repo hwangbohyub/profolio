@@ -18,6 +18,41 @@
     height:300px;
 }
 
+#article1, #article2 , #article3, #article4 {
+  margin-top: 50px;
+}
+
+#article1 .d2, #article4 .d2 {
+  text-align: center;
+}
+
+#article1 img{
+  width: 700px;
+  height: 400px;
+}
+
+#article4 img {
+  width: 900px;
+  height: 500px;
+}
+
+.d1 {
+  border-bottom:2px solid black;
+  font-size: 1.3em;
+  font-weight: bold;
+  color: green;
+}
+
+.d2 {
+  border-bottom: 1px solid #cccccc;
+  padding: 50px 50px 30px 30px;
+}
+
+.profolio_span {
+  color:orange;
+  font-size: 1.3em;
+}
+
 .go {
   color: white;
 }
