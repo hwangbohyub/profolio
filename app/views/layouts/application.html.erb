@@ -25,10 +25,14 @@
   <body>
 
     <!-- NavBar -->
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="/">Profolio</a>
+          <a class="navbar-brand" href="/">
+            <div class="fill" style="width:120px; height:20px;">
+              <%=image_tag "profolio_logo.png"%>
+            </div>
+          </a>
         </div>
         <ul class="nav navbar-nav">
           <li><a href="/intro">Profolio소개</a></li>
@@ -40,14 +44,7 @@
               <li><a href="/posts">포트폴리오 게시판</a></li>
             </ul>
           </li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">포트폴리오 작성 가이드
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="/guide1">포트폴리오란?</a></li>
-              <li><a href="/guide2">포트폴리오 가이드</a></li>
-            </ul>
-          </li>
+          <li><a href="/guides">포트폴리오 가이드</a></li>
           <li><a href="/mentor">전문가 인터넷 상담</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -68,6 +65,10 @@
         </ul>
       </div>
     </nav>
+
+    <div class="container" style="height:70px">
+
+    </div>
 
     <%= yield %>
 

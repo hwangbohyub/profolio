@@ -1,0 +1,51 @@
+// Place all the styles related to the guides controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#guide_nav {
+  margin-top: 70px;
+  text-align: center;
+}
+
+#guide_nav a{
+  text-decoration: none;
+  color: black;
+}
+
+.guide1_section {
+  margin-bottom: 100px;
+}
+
+.guide1_section img {
+  width: 700px;
+  height: 450px;
+  border: 1px solid #cccccc;
+  border-radius: 20px;
+}
+
+.guide1_article1 {
+  text-align: center;
+  margin-top:50px;
+  border-bottom: 2px solid #cccccc;
+  padding-bottom: 10px;
+}
+
+.guide1_article2 {
+  text-align: center;
+  margin-top:30px;
+}
+
+.guide2_article .fill {
+  padding-left: 130px;
+  width: 80%;
+  height: 80%;
+}
+
+.guide2_article {
+  margin: 100px 0;
+}
+
+.guide4_section {
+  margin-top: 40px;
+}

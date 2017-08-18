@@ -22,12 +22,6 @@ class HomeController < ApplicationController
   def intro
   end
 
-  def guide1
-  end
-
-  def guide2
-  end
-
   def mentor
   end
 

@@ -18,6 +18,8 @@
     height:300px;
 }
 
+
+
 #article1, #article2 , #article3, #article4 {
   margin-top: 50px;
 }
@@ -40,7 +42,6 @@
   border-bottom:2px solid black;
   font-size: 1.3em;
   font-weight: bold;
-  color: green;
 }
 
 .d2 {
@@ -102,8 +103,12 @@ body {
 
 /* Home Page Carousel */
 
+nav {
+  margin-bottom: 0;
+}
+
 header.carousel {
-    height: 50%;
+    height: 100%;
 }
 
 header.carousel .item,

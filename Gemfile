@@ -11,6 +11,7 @@ gem "fog-aws"
 # Devise
 gem 'devise', git: 'https://github.com/plataformatec/devise.git'
 gem 'devise-i18n'
+gem 'devise-bootstrap-views'
 gem 'bcrypt', platforms: :ruby
 gem 'cancancan'
 gem 'rolify'

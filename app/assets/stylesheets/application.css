@@ -14,9 +14,9 @@
  *= require_self
  */
 
- .board_title {
+ /*.board_title {
      width: 400px;
      overflow: hidden;
      text-overflow: ellipsis;
      white-space: nowrap;
- }
+ }*/
