@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   devise_for :users
 
   #home
@@ -6,7 +7,6 @@ Rails.application.routes.draw do
   get '/my_posts' => 'home#my_posts'
   get '/my_info' => 'home#my_info'
   get '/intro' => 'home#intro'
-  get '/mentor' => 'home#mentor'
 
   #guides
   get '/guides' => 'guides#home'
@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   get '/guide2' => 'guides#guide2'
   get '/guide3' => 'guides#guide3'
   get '/guide4' => 'guides#guide4'
+
+  #mentor
+  get '/mentor' => 'mentor#home'
 
   #pass
   get '/pass' => 'pass#pass'

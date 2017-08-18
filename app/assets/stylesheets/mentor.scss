@@ -1,0 +1,118 @@
+// Place all the styles related to the mentor controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  /* 1rem === 15px */
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+[lang="en"] {
+  font-family: 'Montserrat', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+a {
+  color: inherit;
+}
+
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.bg-primary {
+  color: #fff !important;
+}
+
+bg-primary {
+  background-color: #ff9e1e !important;
+}
+
+a.bg-primary:focus,
+a.bg-primary:hover {
+  //background-color: #f38c04 !important;
+}
+
+@media screen and (max-width: 576px) {
+  .carousel__title {
+    font-size: 5.33333rem;
+  }
+}
+
+@media screen and (min-width: 577px) and (max-width: 992px) {
+  .carousel__title {
+    font-size: 7.33333333rem;
+  }
+}
+
+.btn {
+  border-radius: 100px;
+  color: #fff;
+}
+
+/* Section Commons */
+.section {
+  padding: 120px 0;
+  text-align: center;
+}
+
+.section__title {
+  font-size: 3.33333333rem;
+  font-weight: 300;
+  line-height: 1.44;
+  letter-spacing: -0.02em;
+}
+
+.section__category {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.27em;
+  text-transform: uppercase;
+}
+
+.section_text {
+  margin_bottom: 0;
+}
+/* Clubs */
+
+#clubs {
+  background-color: #f7f7f7;
+}
+.card {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.btn.btn-primary {
+  border: none;
+  font-size: 0.8rem;
+  line-height: 1;
+}
+
+
+.card-img__container {
+  height:180px;
+  overflow:hidden;
+}
+
+.card-img-top {
+  width:100%;
+  height:auto;
+}
