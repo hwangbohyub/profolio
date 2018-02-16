@@ -45,6 +45,8 @@
 ex) 웹 개발자 -> Ruby on rails, java script, CSS, html을 이용하여 다른 사람들과 함께 힘을 합쳐 프로젝트를 수행한 사람
 
 
+
+
 ### 사용 언어 및 기술
 
 - HTML5 & CSS3
